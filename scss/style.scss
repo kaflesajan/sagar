@@ -1,0 +1,253 @@
+@import 'var';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a 
+{
+    text-decoration: none;
+    transition: 0.9s;
+}
+ul 
+{
+    list-style: none;
+    padding-left: 0;
+}
+html 
+{
+    scroll-behavior: smooth;
+}
+body 
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    background: #f3f3f3;
+}
+header 
+{
+    background: $dark;
+    .top_nav 
+    {
+        ul 
+        {
+            li
+            {
+                display: inline;
+                a 
+                {
+                    color: $white;
+                    padding: 0 15px;
+                    font-size: 12px;
+                    border-right: 1px solid $white;
+                    &:hover 
+                    {
+                        color: $brand;
+                    }
+                }
+                &:last-child
+                {
+                    a 
+                    {
+                        border:none;
+                    }
+                }
+            }
+        }
+    }
+    .formsearch
+    {
+        border-radius: 5px 0 0 5px;
+    }
+    .formbtn
+    {
+        border-radius: 0px 5px 5px 0;
+    }
+    .cart
+    {
+        width: 35px; height: 35px;
+        background: $brand; border-radius: 50%;
+        line-height: 35px; text-align: center;
+    }
+}
+.bg-light
+{
+    background: $brand !important;
+ 
+ 
+}
+.navbar-light 
+{
+    .navbar-nav .nav-link
+    {
+        color: $white;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 6px 15px;
+        &:hover 
+        {
+            background: $white;
+        }
+    }
+    .navbar-toggler
+    {
+        background: $white;
+    }
+}
+.list-group-item
+{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    &::before
+    {
+        content: '';
+        font-family: "Font Awesome 5 Free";
+        padding-right: 4px;
+    }
+    a 
+    {
+        color: $dark;
+    }
+}
+.slider
+{
+    position: relative;
+    .content
+    {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        text-shadow: 0px 0px 5px $white;
+        h1 
+        {
+            font-weight: 900;
+            font-size: 3rem;
+        }
+    }
+}
+
+.one 
+{
+    .del 
+    {
+        text-decoration: line-through;
+    }
+    .rating
+    {
+        color: $yellow;
+    }
+    .oneimg
+    {
+        overflow: hidden;
+        height: 100%;
+    img 
+    {
+        transition: 0.9s;
+        &:hover 
+        {
+            transform: scale(1.3);
+            filter: grayscale(100%);
+        }
+    }
+}
+}
+.owl-nav
+{
+    position: absolute;
+    top: -40px;
+    right: 10px;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev
+{
+    background: $brand !important;
+    width: 25px;
+    height: 25px;
+    margin: 0px 3px;
+    border-radius: 50%;
+    color: $white;
+}
+.owl-carousel .owl-item img
+{
+    height: 210px;
+}
+.clients
+{
+    background: #F00E34;
+    padding: 40px 0;
+}
+.footer-top
+{
+    background: $dark;
+    color: #b6b6b6;
+    i 
+    {
+        color: $brand;
+        padding-right: 10px;
+    }
+    li 
+    {
+        line-height: 1.7;
+    }
+    h3
+    {
+        color: $white;
+        font-size: 17px;
+    }
+    .payment i
+    {
+        font-size: 27px;
+    }
+  
+}
+.copyright 
+{
+    background: #1f1e1e;
+    padding: 20px 0;
+    text-align: center;
+    ul li 
+    {
+        display: inline;
+        padding: 10px 20px;
+        color: $white;
+    }
+}
+.arrow
+{
+    width: 45px; height: 45px;
+    background: $brand;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    line-height: 45px;
+    text-align: center;
+    display: none;
+    a 
+    {
+        color: $white;
+    }
+}
+.navbar-brand
+{
+    background: $white;
+    padding: 0px 10px;
+    color: $brand;
+    display: none;
+}
+.menu-fixed
+{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    animation: menufade 0.3s linear;
+    z-index: 99999;
+}
+@keyframes menufade
+{
+    0%{ transform: translateY(-100%);}
+    100%{ transform: translateY(0%);}
+}
